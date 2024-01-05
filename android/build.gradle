@@ -30,20 +30,22 @@ android {
         namespace("de.appgewaltig.disk_space")
     }
 
-    compileSdkVersion 34
+    defaultConfig {
+        compileSdk 33
+        minSdkVersion 16
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
-    defaultConfig {
-        minSdkVersion 16
-        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-    }
+
     lintOptions {
         disable 'InvalidPackage'
     }
-}
-
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
