@@ -1,3 +1,5 @@
+package android
+
 group 'de.appgewaltig.disk_space'
 version '1.0-SNAPSHOT'
 
@@ -9,7 +11,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.1'
+        classpath 'com.android.tools.build:gradle:8.8.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -31,14 +33,14 @@ android {
     }
 
     defaultConfig {
-        compileSdk 33
-        minSdkVersion 16
+        compileSdk 35
+        minSdkVersion 32
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 
     sourceSets {
